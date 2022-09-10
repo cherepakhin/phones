@@ -1,0 +1,7 @@
+server:
+  port: ${COMMUTATOR_PORT:8080}
+
+spring:
+  application:
+    name: commutator
+
