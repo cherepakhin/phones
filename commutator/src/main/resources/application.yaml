@@ -1,5 +1,5 @@
 server:
-  port: ${COMMUTATOR_PORT:8080}
+  port: ${COMMUTATOR_PORT:8180}
 
 spring:
   application:

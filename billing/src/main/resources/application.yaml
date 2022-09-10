@@ -1,5 +1,5 @@
 server:
-  port: ${BILLING_PORT:8080}
+  port: ${BILLING_PORT:8280}
 
 spring:
   application:

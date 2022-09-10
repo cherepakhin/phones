@@ -5,32 +5,28 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <artifactId>root</artifactId>
         <groupId>ru.perm.v.phones</groupId>
+        <artifactId>backend</artifactId>
         <version>1.0.0</version>
     </parent>
 
     <artifactId>commutator</artifactId>
+    <version>1.0.0</version>
 
     <dependencies>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-data-jpa</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.postgresql</groupId>
-            <artifactId>postgresql</artifactId>
-            <scope>runtime</scope>
-        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>org.springframework.boot</groupId>-->
+<!--            <artifactId>spring-boot-starter-data-jpa</artifactId>-->
+<!--        </dependency>-->
+<!--        <dependency>-->
+<!--            <groupId>org.postgresql</groupId>-->
+<!--            <artifactId>postgresql</artifactId>-->
+<!--            <scope>runtime</scope>-->
+<!--        </dependency>-->
         <dependency>
             <groupId>ru.perm.v.phones</groupId>
             <artifactId>dto</artifactId>
-            <version>${project.parent.version}</version>
-            <scope>compile</scope>
+            <version>1.0.0</version>
         </dependency>
     </dependencies>
 
