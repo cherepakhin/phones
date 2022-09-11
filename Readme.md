@@ -17,7 +17,7 @@
 ````shell
 cd commutator
 mvn spring-boot:run
-cd ../billin
+cd ../billing
 mvn spring-boot:run
 ````
 
