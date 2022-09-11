@@ -15,9 +15,12 @@
 В файле [run.sh](run.sh)
 
 ````shell
+# Запуск
 cd commutator
 mvn spring-boot:run
-cd ../billing
-mvn spring-boot:run
+
+# Проверка (жив/нет)
+http :8180/commutator
+Ok
 ````
 
