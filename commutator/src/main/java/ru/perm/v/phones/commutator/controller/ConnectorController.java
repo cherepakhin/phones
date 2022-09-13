@@ -7,8 +7,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import ru.perm.v.phones.dto.PhoneStatus;
 
-import static java.lang.String.format;
-
 @RestController
 @RequestMapping("/commutator")
 @Slf4j
@@ -41,7 +39,7 @@ public class ConnectorController {
      */
     @PostMapping("/end-call")
     public Integer endCall(String phoneA, String phoneB) {
-        log.info("End call :phoneA to :phoneB");
+        log.info("End call {} to {}", phoneA, phoneB);
         return 0;
     }
 }
