@@ -22,6 +22,7 @@ class ConnectorControllerTest {
         this.mockMvc.perform(get(CONNECTOR_START_CALL)
                         .contentType(MediaType.APPLICATION_JSON))
                 .andDo(print())
-                .andExpect(status().isOk()).andExpect(content().string("OK"));
+                .andExpect(status().isOk())
+                .andExpect(content().string("OK"));
     }
 }

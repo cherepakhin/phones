@@ -11,6 +11,10 @@ import ru.perm.v.phones.dto.PhoneStatus;
 @RequestMapping("/commutator")
 @Slf4j
 public class ConnectorController {
+    /**
+     * Простая проверка контроллера жив/нет
+     * @return OK
+     */
     @GetMapping("")
     public String test() {
         log.info("test");
