@@ -1,18 +1,24 @@
 package ru.perm.v.phones.commutator.controller;
 
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import ru.perm.v.phones.dto.PhoneStatus;
 
+import static java.lang.String.format;
+
 @RestController
 @RequestMapping("/commutator")
+@Slf4j
 public class ConnectorController {
     @GetMapping("")
     public String test() {
+        log.info("test");
         return "OK";
     }
+
     /**
      * Начало разговора
      *
@@ -22,8 +28,8 @@ public class ConnectorController {
      */
     @GetMapping("/start-call")
     public PhoneStatus startCall(String phoneA, String phoneB) {
-        PhoneStatus phoneStatus = PhoneStatus.CONNECTED;
-        return phoneStatus;
+        log.info("Start call {} to {}", phoneA, phoneB);
+        return PhoneStatus.CONNECTED;
     }
 
     /**
@@ -35,6 +41,7 @@ public class ConnectorController {
      */
     @PostMapping("/end-call")
     public Integer endCall(String phoneA, String phoneB) {
+        log.info("End call :phoneA to :phoneB");
         return 0;
     }
 }
