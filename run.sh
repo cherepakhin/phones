@@ -1,4 +1,4 @@
 cd commutator
-mvn spring-boot:run
+mvn clean spring-boot:run
 cd ../billing
-mvn spring-boot:run
+mvn clean spring-boot:run
