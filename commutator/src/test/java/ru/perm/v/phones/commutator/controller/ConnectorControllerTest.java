@@ -14,15 +14,14 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 class ConnectorControllerTest {
     @Autowired
     private MockMvc mockMvc;
-    private final String CONNECTOR_START_CALL = "/start-call";
+    private final String CONNECTOR_START_CALL = "/commutator";
 
     @Test
-    void startCall() throws Exception {
-//        assert true;
+    void isLive() throws Exception {
         this.mockMvc.perform(get(CONNECTOR_START_CALL)
                         .contentType(MediaType.APPLICATION_JSON))
                 .andDo(print())
-                .andExpect(status().isBadRequest());
+                .andExpect(status().isOk());
 
     }
 }
