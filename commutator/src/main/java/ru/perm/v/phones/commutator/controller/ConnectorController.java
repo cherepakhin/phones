@@ -10,6 +10,7 @@ import ru.perm.v.phones.dto.PhoneStatus;
 public class ConnectorController {
     /**
      * Простая проверка контроллера жив/нет
+     *
      * @return OK
      */
     @GetMapping("")
