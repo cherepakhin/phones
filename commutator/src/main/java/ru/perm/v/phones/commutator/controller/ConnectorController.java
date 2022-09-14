@@ -1,10 +1,7 @@
 package ru.perm.v.phones.commutator.controller;
 
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import ru.perm.v.phones.dto.PhoneStatus;
 
 @RestController
@@ -29,7 +26,7 @@ public class ConnectorController {
      * @return Возможные значения: нет денег у phoneA, phoneB занят, один из телефонов выключен, соединено
      */
     @GetMapping("/start-call")
-    public PhoneStatus startCall(String phoneA, String phoneB) {
+    public PhoneStatus startCall(@RequestParam("phoneA") String phoneA, @RequestParam("phoneB") String phoneB) {
         log.info("Start call {} to {}", phoneA, phoneB);
         return PhoneStatus.CONNECTED;
     }
