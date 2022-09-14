@@ -31,7 +31,7 @@ class ConnectorControllerTest {
     }
 
     @Test
-    void startCallIsConnect() throws Exception {
+    void startCall_IsConnect() throws Exception {
         String phoneA="A";
         String phoneB="B";
         this.mockMvc.perform(get(START_CALL)
