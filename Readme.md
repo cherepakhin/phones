@@ -23,8 +23,10 @@ mvn clean package
 
 ````shell
 # Запуск
-cd commutator
-mvn spring-boot:run
+cd billing
+mvn clean spring-boot:run &
+cd ../commutator
+mvn clean spring-boot:run &
 
 # Проверка (жив/нет)
 http :8180/commutator
